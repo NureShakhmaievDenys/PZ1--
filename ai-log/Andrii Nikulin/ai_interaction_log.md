@@ -1,16 +1,19 @@
-## Запит 1
+Виконавець: Нікулін Андрій
+Перевіряючий (Рев'ювер): Шахмаєв Денис (Примітка: якщо рев'ювером був інший студент, зміни ім'я)Зона відповідальності: Базові UX/UI-вимоги Mini Issue Tracker (V1), додавання фіч V2 та виправлення зауважень до фінального релізу.
 
+Запит 1 (Етап: Створення базових UX/UI-вимог V1)
+Промпт виконавця (Андрій):
 Я відповідаю за базові UX/UI-вимоги Mini Issue Tracker.
-
 Проаналізуй додану специфікацію та підготуй компактну таблицю для Figma з такими колонками:
 
-- правило або функція;
-- хто має доступ;
-- очікувана поведінка в UI;
-- джерело вимоги: US, AC або BR.
+правило або функція;
 
+хто має доступ;
+
+очікувана поведінка в UI;
+
+джерело вимоги: US, AC або BR.
 Обов’язково включи: створення issue, перегляд списку, призначення assignee, зміну priority, зміну status, коментарі та Important Issues.
-
 Не додавай нових функцій, ролей або статусів, яких немає у специфікації.
 
 ## Відповідь LLM 1
@@ -37,43 +40,33 @@ Lead, який не є поточним Assignee, не має права змі�
 
 ## Рішення учасника після запиту 1
 
-На основі відповіді перевірено та прийнято такі рішення:
+Результати перевірки (Виконавець: Андрій, Рев'ювер: Денис):
+На основі відповіді ми перевірили логіку та прийняли такі рішення:
 
-- У `REF-01` додано матрицю прав для Member non-assignee, Member assignee, Lead non-assignee та Lead assignee.
-- Для Lead non-assignee Status control має бути disabled.
-- Для current assignee показуються лише допустимі наступні статуси.
-- Important Issues використовує правило: High або Critical AND Status не Closed.
-- У Figma перевірено, що Resolved issue з High або Critical priority залишається у списку Important Issues.
+У REF-01 додано матрицю прав для Member non-assignee, Member assignee, Lead non-assignee та Lead assignee.
 
-## Запит 2
+Для Lead non-assignee Status control має бути disabled.
 
+Для current assignee показуються лише допустимі наступні статуси.
+
+Important Issues використовує правило: High або Critical AND Status не Closed.
+
+У Figma рев'ювер перевірив, що Resolved issue з High або Critical priority залишається у списку Important Issues.
+
+Запит 2 (Етап: Розширення макетів до версії V2)
+Промпт виконавця (Андрій):
 Extend existing Mini Issue Tracker Figma file. Keep desktop grayscale low-fi style, base screens, typography, spacing and reusable components. Do not redesign the product or add bulk actions, delete, dashboards, analytics or AI.
 
 Add V2 features with native editable Figma layers:
+Search & Filters: Add "Search issues" input and "Filters" button to S-02-A and S-02-B, plus active filter chips and "Clear all". Create S-02-D Filtered Results: query "export", tag "Backend", status "Resolved"; show only ISS-003. Create S-02-E No Search Results: query "mobile"; show "No issues match the selected filters" and "Clear all". Create M-02 Advanced Filters modal: Status, Priority, Assignee, Tag, Due date state (Any date, Due today, Due this week, Overdue, No due date), actions "Apply filters" and "Clear all".
 
-Search & Filters:
-Add "Search issues" input and "Filters" button to S-02-A and S-02-B, plus active filter chips and "Clear all".
-Create S-02-D Filtered Results: query "export", tag "Backend", status "Resolved"; show only ISS-003.
-Create S-02-E No Search Results: query "mobile"; show "No issues match the selected filters" and "Clear all".
-Create M-02 Advanced Filters modal: Status, Priority, Assignee, Tag, Due date state (Any date, Due today, Due this week, Overdue, No due date), actions "Apply filters" and "Clear all".
+Tags: Compact tag chips: Bug, Feature, UI, Backend, Documentation, Urgent. Show in issue rows and S-03. Add "Add tag" control in S-03.
 
-Tags:
-Compact tag chips: Bug, Feature, UI, Backend, Documentation, Urgent. Show in issue rows and S-03.
-Add "Add tag" control in S-03.
+Due Dates & Overdue: M-01 Create modal: add optional Tags and Due date inputs (never expose ID, Assignee, Priority, Status, Author, Created at). S-03: add Due date control with Apply (Lead can edit; Member sees disabled). Show explicit "Overdue" label if non-Closed issue date is in the past. Closed issues never show Overdue.
 
-Due Dates & Overdue:
-M-01 Create modal: add optional Tags and Due date inputs (never expose ID, Assignee, Priority, Status, Author, Created at).
-S-03: add Due date control with Apply (Lead can edit; Member sees disabled).
-Show explicit "Overdue" label if non-Closed issue date is in the past. Closed issues never show Overdue.
+Attachments: S-03: add Attachments section with "Add attachment" action. Create M-03 Add Attachment modal. Show file-selected, uploading, upload-error, uploaded states. Attachment rows: name, type (PNG/JPG/PDF/TXT/LOG), size, author, upload time. Error state must not add saved row.
 
-Attachments:
-S-03: add Attachments section with "Add attachment" action.
-Create M-03 Add Attachment modal. Show file-selected, uploading, upload-error, uploaded states.
-Attachment rows: name, type (PNG/JPG/PDF/TXT/LOG), size, author, upload time. Error state must not add saved row.
-
-Subtasks:
-S-03: add "Subtasks (2 of 5 completed)" with inline "Add subtask" input.
-Reusable subtask rows: checkbox, title, completed state (stays visible and checked). Never auto-close parent issue.
+Subtasks: S-03: add "Subtasks (2 of 5 completed)" with inline "Add subtask" input. Reusable subtask rows: checkbox, title, completed state (stays visible and checked). Never auto-close parent issue.
 
 Prototype Intent: Filters -> M-02; M-02 Apply -> S-02-D; Clear all -> S-02-A; Add attachment -> M-03; Upload success -> S-03 with row; preserve existing navigation.
 
@@ -110,10 +103,15 @@ Generated and updated the following Figma wireframe components and states accord
 
 ## Рішення учасника після запиту 2
 
-На основі отриманого результату від Figma Agent перевірено та зафіксовано:
+Результати перевірки (Виконавець: Андрій, Рев'ювер: Денис):
+На основі отриманого результату оновив макети, а рев'ювер перевірив та зафіксував наступне:
 
-- **Повнота артефактів:** створено фрейми `S-02-D`, `S-02-E`, `M-02`, `M-03` та оновлено `M-01`, `S-03`.
-- **Контроль ролей:** перевірено, що поле `Due date` на екрані `S-03` для ролі Member відображається як `disabled`, а доступне для редагування лише Team Lead.
-- **Граничні випадки:** перевірено, що бейдж `Overdue` не з'являється у задач зі статусом `Closed`, навіть якщо дата минула.
-- **Стан помилки (Attachments):** підтверджено, що у стані `upload-error` новий рядок файлу не додається до списку на `S-03`.
-- **Чистота макета:** перевірено відсутність нерелевантних графічних елементів (іконки-заглушки видалено, збережено строго чорно-білий wireframe стиль).
+Повнота артефактів: створено фрейми S-02-D, S-02-E, M-02, M-03 та оновлено M-01, S-03.
+
+Контроль ролей: перевірено, що поле Due date на екрані S-03 для ролі Member відображається як disabled, а доступне для редагування лише Team Lead.
+
+Граничні випадки: перевірено, що бейдж Overdue не з'являється у задач зі статусом Closed, навіть якщо дата минула.
+
+Стан помилки (Attachments): підтверджено, що у стані upload-error новий рядок файлу не додається до списку на S-03.
+
+Чистота макета: перевірено відсутність нерелевантних графічних елементів (іконки-заглушки видалено, збережено строго чорно-білий wireframe стиль).
