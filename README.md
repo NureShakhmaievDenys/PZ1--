@@ -10,7 +10,7 @@ Release MVP охоплює US-01–US-08: списки All Issues та Important
 
 ## Посилання
 
-- Figma prototype: https://www.figma.com/design/a8oUbf6v4MtBhqgk8yJfbT/Untitled?node-id=0-1&p=f&t=YzhRyMTQxb0k2GH6-0
+- Figma prototype: https://www.figma.com/design/a8oUbf6v4MtBhqgk8yJfbT/Untitled?node-id=0-1&t=pI6Fjna8bwygayQn-1
 
 Перед здаванням перевірте, що Figma-файл перейменовано на `Mini Issue Tracker`, а викладач має доступ на перегляд за посиланням.
 
