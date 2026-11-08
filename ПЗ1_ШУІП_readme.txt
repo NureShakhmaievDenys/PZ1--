@@ -9,7 +9,7 @@ GitHub repository:
 https://github.com/NureShakhmaievDenys/PZ1--.git
 
 Figma prototype:
-https://www.figma.com/design/0YItEFIVsyihsSfEJLA9Qj/Untitled?node-id=0-1&t=uBTxd06ERTca6yv1-1
+https://www.figma.com/design/a8oUbf6v4MtBhqgk8yJfbT/Untitled?node-id=0-1&t=FWb4JppCZdQ30SbX-0
 
 У GitHub-репозиторії розміщено:
 - вихідну специфікацію;
